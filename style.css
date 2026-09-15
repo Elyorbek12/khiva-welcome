@@ -1,0 +1,504 @@
+:root {
+  --sand: #d8b47a;
+  --dark: #10100f;
+  --dark2: #181715;
+  --cream: #f5efe5;
+  --gold: #c79a52;
+  --white: #ffffff;
+  --muted: #b9b4ab;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+
+  background:
+    url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=85")
+    center / cover;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.88)
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  padding: 40px 25px 60px;
+
+  max-width: 700px;
+}
+
+.eyebrow,
+.section-label,
+.small-title {
+  color: var(--sand);
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 12vw, 82px);
+
+  line-height: .98;
+
+  margin: 18px 0;
+}
+
+.hero h1 span {
+  color: var(--sand);
+  font-style: italic;
+}
+
+.hero p {
+  color: #ddd7cd;
+  margin-bottom: 28px;
+}
+
+
+/* BUTTON */
+
+.primary-btn {
+  display: inline-block;
+
+  background: var(--gold);
+  color: #17120c;
+
+  padding: 14px 24px;
+
+  border-radius: 3px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: .5px;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.primary-btn:hover {
+  background: #e0bd82;
+  transform: translateY(-2px);
+}
+
+
+/* SECTIONS */
+
+section {
+  padding: 75px 25px;
+}
+
+.welcome,
+.experiences,
+.story,
+.food {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 9vw, 58px);
+
+  line-height: 1.05;
+
+  margin: 15px 0 22px;
+}
+
+.welcome p,
+.food p,
+.booking p {
+  max-width: 600px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
+
+/* WIFI */
+
+.wifi-card {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  background: #211f1a;
+
+  border: 1px solid #39352e;
+
+  padding: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.wifi-icon {
+  font-size: 30px;
+}
+
+.wifi-card h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+}
+
+.wifi-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+.wifi-card button {
+  margin-left: auto;
+
+  background: transparent;
+
+  color: var(--sand);
+
+  border: 1px solid var(--sand);
+
+  padding: 10px 18px;
+
+  cursor: pointer;
+}
+
+
+/* EXPERIENCE */
+
+.experience-card {
+  margin-top: 35px;
+
+  background: var(--dark2);
+
+  overflow: hidden;
+
+  border: 1px solid #302d28;
+}
+
+.experience-image {
+  height: 300px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.image-one {
+  background-image:
+    url("https://images.unsplash.com/photo-1596395819057-e37f55a8516f?auto=format&fit=crop&w=1200&q=85");
+}
+
+.image-two {
+  background-image:
+    url("https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=1200&q=85");
+}
+
+.experience-content {
+  padding: 25px;
+}
+
+.experience-content span {
+  color: var(--sand);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.experience-content h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+
+  margin: 8px 0;
+}
+
+.experience-content p {
+  color: var(--muted);
+
+  font-size: 14px;
+
+  margin-bottom: 15px;
+}
+
+.text-link {
+  color: var(--sand);
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* STORY */
+
+.story {
+  background: #151412;
+
+  max-width: none;
+
+  padding-left: max(25px, calc((100vw - 950px) / 2));
+  padding-right: max(25px, calc((100vw - 950px) / 2));
+}
+
+.story-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-top: 45px;
+}
+
+.story-grid strong {
+  color: var(--gold);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+}
+
+.story-grid h3 {
+  margin: 10px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+}
+
+.story-grid p {
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+/* BOOKING */
+
+.booking {
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.75),
+      rgba(0,0,0,.85)
+    ),
+    url("https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1400&q=85")
+    center / cover;
+
+  padding: 100px 25px;
+}
+
+.booking p {
+  margin: 0 auto 30px;
+}
+
+
+/* FOOD */
+
+.food {
+  text-align: center;
+}
+
+.food p {
+  margin: 0 auto 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 45px 25px;
+
+  border-top: 1px solid #302d28;
+
+  color: var(--muted);
+}
+
+footer h3 {
+  font-family: "Playfair Display", serif;
+
+  color: var(--cream);
+
+  font-size: 25px;
+
+  letter-spacing: 4px;
+}
+
+footer p {
+  font-size: 12px;
+
+  margin: 5px 0 20px;
+}
+
+footer small {
+  font-size: 10px;
+}
+
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,.8);
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 100;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-box {
+  background: #211f1a;
+
+  border: 1px solid #494237;
+
+  width: 100%;
+  max-width: 400px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.modal-box h2 {
+  font-size: 36px;
+}
+
+.modal-box p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin-top: 20px;
+}
+
+.modal-box strong {
+  display: block;
+
+  color: var(--sand);
+
+  font-size: 18px;
+
+  letter-spacing: 1px;
+}
+
+.modal-box .primary-btn {
+  margin-top: 30px;
+}
+
+.close {
+  position: absolute;
+
+  top: 12px;
+  right: 18px;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .wifi-card {
+    margin: 0 15px;
+
+    padding: 20px;
+
+    align-items: flex-start;
+  }
+
+  .wifi-card button {
+    padding: 8px 13px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    height: 240px;
+  }
+
+}
